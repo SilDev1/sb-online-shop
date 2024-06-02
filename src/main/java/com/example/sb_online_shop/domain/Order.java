@@ -38,8 +38,11 @@ public class Order {
     }
 
     public double getTotal() {
-        return total;
-    }
+        total = 0.0;
+        for (Item item : items) {
+          total += item.getPrice() * item.getQuantity();
+        }
+        return total;    }
 
     public void setTotal(double total) {
         this.total = total;

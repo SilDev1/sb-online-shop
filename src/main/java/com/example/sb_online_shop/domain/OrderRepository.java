@@ -4,4 +4,7 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface OrderRepository {
 
+    default void saveAll(Order... orders) {
+        saveAll(Arrays.asList(orders));
+    }
 }

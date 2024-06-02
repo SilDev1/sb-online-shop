@@ -47,8 +47,9 @@ public class SbOnLineApplication implements CommandLineRunner{
 
 		for (Order o : orepository.findAll()) {
 			i_order++;
-			
-			System.out.print("order_"+i_order+" \t "+o.getCustomer().getFullname()+"\t "+o.getTotal()+"$");
+
+			System.out.println("Customer: " + o.getCustomer().getFullname() + ": Order " + o.getId() + ": Total: " + o.getTotal() + "$");
+			// System.out.print("order_"+i_order+" \t "+o.getCustomer().getFullname()+"\t "+o.getTotal()+"$");
 			
 			System.out.println(" ");
 		}
